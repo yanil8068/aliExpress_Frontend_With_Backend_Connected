@@ -125,8 +125,7 @@ function App() {
                 path="/product/:productid"
                 element={<ProductDetailComponent />}
               />
-              <Route path="/Cart" element={<HomeComponent />} />
-              <Route path="/admindashboard" element={<HomeComponent />} />
+
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
             {/* Toast notifications */}
