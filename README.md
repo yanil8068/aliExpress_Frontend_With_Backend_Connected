@@ -4,7 +4,7 @@
 This project is an e-commerce frontend interface inspired by ALIEXPRESS. It enables users to browse products, manage carts, and securely authenticate using Firebase. Users can browse products without the need for login/signup, but will be redirected to the authentication page when attempting to add items to the cart or visit cart page. The project features efficient state management using Redux Toolkit and a fully responsive UI built with Tailwind CSS.
 
 **Netlify Deployment:**  
-[Live Demo](https://main--aliexpressproject.netlify.app/)
+[Live Demo](https://aliexpressfullstack.netlify.app/)
 
 ## Tech Stack
 
