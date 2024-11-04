@@ -152,7 +152,7 @@ const HeaderComponent = () => {
 
   return (
     <>
-      <div className="sticky top-0  w-full h-16 flex justify-around items-center bg-black text-white">
+      <div className="sticky top-0  w-full h-16 flex justify-around items-center bg-black text-white z-10">
         <div className="w-full flex justify-start items-center p-1 lg:p-4 z-50">
           <div className="w-full flex justify-center items-center">
             <div
@@ -315,17 +315,18 @@ const HeaderComponent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-center justify-center  lg:hidden p-2 -z-10">
+      <div className="w-full flex items-center justify-center  lg:hidden p-2  -z-10">
+        {/* small screen */}
         <div className="relative w-full max-w-lg flex">
           <input
             type="text"
-            className="text-black w-full px-4 py-1.5 rounded-l-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="text-black w-full ml-3  px-4 py-1.5 rounded-l-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={searchTerm}
             onChange={handleSearchInputChange}
-            placeholder="Search for products"
+            placeholder="Search for products small"
           />
           <button
-            className="font-bold flex items-center justify-center bg-black text-white px-4 py-1.5 rounded-r-full border-2 border-gray-300 cursor-pointer hover:bg-gray-800 transition duration-300"
+            className="font-bold flex items-center justify-center mr-3 bg-black text-white px-4 py-1.5 rounded-r-full border-2 border-gray-300 cursor-pointer hover:bg-gray-800 transition duration-300"
             onClick={handleSearchButtonClick}
           >
             <HiMiniMagnifyingGlass className="text-lg" />

@@ -102,12 +102,12 @@ const HomeComponent = () => {
         <img
           src={TopBannerInHomePage}
           alt="My AVIF"
-          className="w-full   lg:w-[1150px]"
+          className="w-full md:mx-3   lg:w-[1150px]"
         />
       </div>
 
       <div className="flex flex-wrap gap-4 py-4 bg-gray-300">
-        <div className="border-blue-800 border-2 bg-blue-200 rounded-2xl mx-auto  ">
+        <div className=" bg-orange-200 rounded-2xl mx-4 md:mx-auto  ">
           <div className=" text-center text-4xl font-semibold ">
             Mens Products
           </div>
@@ -127,14 +127,21 @@ const HomeComponent = () => {
                       <img
                         src={product?.image?.url}
                         alt={product.name}
-                        className="w-36 h-40 md:w-52 md:h-80 object-cover rounded-2xl  md:px-2 "
+                        className="w-36 h-40 md:w-52 md:h-80 sm:w-48 sm:h-80 object-cover rounded-2xl  md:px-2 "
                       />
                     </div>
 
                     <div className="flex justify-center items-center ">
                       <div className="flex items-center justify-center bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded my-2 w-fit">
                         <div>
-                          <span className="text-xs">{product.title}</span>
+                          <span className="text-xs sm:block hidden">
+                            {product.title.split(" ").slice(0, 2).join(" ") +
+                              "..."}
+                          </span>
+                          <span className="text-xs sm:hidden block">
+                            {product.title.split(" ").slice(0, 1).join(" ") +
+                              "..."}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -147,7 +154,7 @@ const HomeComponent = () => {
             </div>
           )}
         </div>
-        <div className="border-pink-800 border-2 bg-pink-200 rounded-2xl  mx-auto">
+        <div className=" bg-pink-300 rounded-2xl  mx-4 md:mx-auto">
           <div className=" text-center text-4xl font-semibold    ">
             Womens Products
           </div>
@@ -167,14 +174,21 @@ const HomeComponent = () => {
                       <img
                         src={product?.image?.url || ""}
                         alt={product.name}
-                        className="w-36 h-40 md:w-52 md:h-80 object-cover rounded-2xl  md:px-2 "
+                        className="w-36 h-40 md:w-52 md:h-80 sm:w-48 sm:h-80 object-cover rounded-2xl  md:px-2 "
                       />
                     </div>
 
                     <div className="flex justify-center items-center ">
                       <div className="flex items-center justify-center bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded my-2 w-fit">
                         <div>
-                          <span className="text-xs">{product.title}</span>
+                          <span className="text-xs sm:block hidden">
+                            {product.title.split(" ").slice(0, 2).join(" ") +
+                              "..."}
+                          </span>
+                          <span className="text-xs sm:hidden block">
+                            {product.title.split(" ").slice(0, 1).join(" ") +
+                              "..."}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -187,7 +201,7 @@ const HomeComponent = () => {
             </div>
           )}
         </div>
-        <div className="border-yellow-800 border-2 bg-yellow-200 rounded-2xl  mx-auto">
+        <div className=" bg-yellow-200 rounded-2xl mx-4 md:mx-auto">
           <div className=" text-center text-4xl font-semibold  ">
             Jewellery Products
           </div>
@@ -207,14 +221,21 @@ const HomeComponent = () => {
                       <img
                         src={product?.image?.url}
                         alt={product.title}
-                        className="w-36 h-40 md:w-52 md:h-80 object-cover rounded-2xl  md:px-2 "
+                        className="w-36 h-40 md:w-52 md:h-80 sm:w-48 sm:h-80 object-cover rounded-2xl  md:px-2 "
                       />
                     </div>
 
                     <div className="flex justify-center items-center ">
                       <div className="flex items-center justify-center bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded my-2 w-fit">
                         <div>
-                          <span className="text-xs">{product.title}</span>
+                          <span className="text-xs sm:block hidden">
+                            {product.title.split(" ").slice(0, 2).join(" ") +
+                              "..."}
+                          </span>
+                          <span className="text-xs sm:hidden block">
+                            {product.title.split(" ").slice(0, 1).join(" ") +
+                              "..."}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -227,7 +248,7 @@ const HomeComponent = () => {
             </div>
           )}
         </div>
-        <div className="border-gray-800 border-2 bg-gray-200 rounded-2xl  mx-auto">
+        <div className=" bg-gray-400 rounded-2xl  mx-4 md:mx-auto">
           <div className=" text-center text-4xl font-semibold  ">
             Electronics Products
           </div>
@@ -247,7 +268,7 @@ const HomeComponent = () => {
                       <img
                         src={product?.image?.url}
                         alt={product.title}
-                        className="w-36 h-40 md:w-52 md:h-80 object-cover rounded-2xl  md:px-2 "
+                        className="w-36 h-40 md:w-52 md:h-80 sm:w-48 sm:h-80 object-cover rounded-2xl  md:px-2 "
                       />
                     </div>
 
@@ -257,7 +278,14 @@ const HomeComponent = () => {
                           <FaStar className="mr-1 text-xs" />
                         </div>
                         <div>
-                          <span className="text-xs">{product.title}</span>
+                          <span className="text-xs sm:block hidden">
+                            {product.title.split(" ").slice(0, 2).join(" ") +
+                              "..."}
+                          </span>
+                          <span className="text-xs sm:hidden block">
+                            {product.title.split(" ").slice(0, 1).join(" ") +
+                              "..."}
+                          </span>
                         </div>
                       </div>
                     </div>

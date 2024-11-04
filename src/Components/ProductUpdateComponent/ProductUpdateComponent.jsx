@@ -11,6 +11,7 @@ const ProductUpdateComponent = ({ product, onClose, setAllProducts }) => {
   const [description, setDescription] = useState(product.description || "");
   const [quantity, setQuantity] = useState(product.quantity || 0);
   const [image, setImage] = useState(product.image || "");
+  console.log("image", image);
 
   const token = Cookies.get("Job") || null;
 
@@ -124,7 +125,7 @@ const ProductUpdateComponent = ({ product, onClose, setAllProducts }) => {
               id="productimage"
               onChange={(e) => setImage(e.target.files[0])}
               className="border border-gray-300 p-2 w-full"
-              required
+              // required // changed
             />
           </div>
           <div className="flex justify-end">
