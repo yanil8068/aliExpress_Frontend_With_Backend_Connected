@@ -6,6 +6,9 @@ This project is an e-commerce frontend interface inspired by ALIEXPRESS. It enab
 **Netlify Deployment:**  
 [Live Demo](https://aliexpressfullstack.netlify.app/)
 
+**Backend Repository:**  
+[Backend repo](https://github.com/yanil8068/aliExpress_Backend)
+
 ## Tech Stack
 
 - **React.js** - Interactive, component-based UI
