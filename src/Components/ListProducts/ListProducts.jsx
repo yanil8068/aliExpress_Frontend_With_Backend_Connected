@@ -42,12 +42,23 @@ export default function ListProducts({ ProductType, RelativePath }) {
           import.meta.env.VITE_BACKEND_URI
         }/api/product/details/category/${categoryid}`
       );
+      console.log(response.status);
+
       const data = await response.json();
-      console.log("data", data);
-      setProducts(data);
-      setOriginalProducts(data); // Store the original product list for reset
+      if (!data || data.length === 0 || response.status === 404) {
+        // Handle empty or undefined data
+        setProducts([]);
+        setOriginalProducts([]);
+      } else {
+        setProducts(data);
+        setOriginalProducts(data);
+      }
+      // console.log("data", data);
+      // setProducts(data);
+      // setOriginalProducts(data); // Store the original product list for reset
     } catch (error) {
       console.error("Error fetching products:", error);
+      setProducts([]); // Ensure products array is empty if there's an error
     } finally {
       setIsLoading(false); // Stop loading once products are fetched
     }
@@ -111,6 +122,10 @@ export default function ListProducts({ ProductType, RelativePath }) {
         <div className="flex justify-center items-center h-screen">
           <p>Loading...</p>
           {/* You can replace this with a spinner if you want */}
+        </div>
+      ) : products.length === 0 ? ( // Check if products array is empty
+        <div className="flex justify-center items-center h-screen">
+          <p>No products available in this category.</p>
         </div>
       ) : (
         <div className="lg:flex lg:justify-evenly xl:flex xl:justify-evenly 2xl:flex 2xl:justify-evenly ">

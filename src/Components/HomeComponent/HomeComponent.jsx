@@ -275,9 +275,6 @@ const HomeComponent = () => {
                     <div className="flex justify-center items-center ">
                       <div className="flex items-center justify-center bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded my-2 w-fit">
                         <div>
-                          <FaStar className="mr-1 text-xs" />
-                        </div>
-                        <div>
                           <span className="text-xs sm:block hidden">
                             {product.title.split(" ").slice(0, 2).join(" ") +
                               "..."}
