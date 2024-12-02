@@ -36,7 +36,7 @@ const HomeComponent = () => {
       const response = await axios.get(
         `${
           import.meta.env.VITE_BACKEND_URI
-        }/api/product/details/category/66fe5edb29844a67fee27149`
+        }/api/product/details/category/674db33ba53b6d7edaf4b16d`
       );
 
       setWomensProducts(response.data);
